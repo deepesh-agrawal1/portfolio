@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepesh Agrawal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .full-screen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url("bag.jpg") no-repeat center center/cover;
+            position: relative;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.264);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #fff;
+            text-align: center;
+        }
+        .overlay h1, .overlay p {
+            margin: 0.5rem 0;
+        }
+        .overlay .typed-text {
+            font-size: 2em;
+            border-right: 0.1em solid #333;
+            white-space: nowrap;
+            overflow: hidden;
+            
+        }
+        .overlay .typed-text {
+            
+            
+            top: 40%; 
+            left: 40%; 
+
+            font-size: 1.5em; 
+            font-family: Arial,sans-serif; 
+            background: linear-gradient(to right, #099e80, 
+                    #1493dc, #ef8fdd, #9c0bc4); 
+            -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text; 
+           
+            
+            
+        }
+
+        .overlay .btn {
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #fff;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #2f0650;
+            color: #fff;
+        }
+</style>
+</head>
+<body>
+    <div class="full-screen">
+        <div class="overlay">
+            <h1>Welcome to Engineering Journey of</h1>
+            <div class="typed-text" id="typed-name" ></div>
+            
+            <p>Computer Science And Design</p>
+            <p>   </p>
+            <a href="portfolio.html" class="btn" >Know More</a>
+        </div>
+    </div>
+    <footer>
+
+        <p>&copy; 2024 Deepesh Agrawal </p>
+        <p> All the projects are being submitted to the MIT,Aurangabad. All rights are reserved</p>
+    </footer>
+
+    <script>
+      
+
+        const name = "Deepesh Agrawal";
+        const typedNameElement = document.getElementById("typed-name");
+        const words = name.split(" ");
+        let wordIndex = 0;
+        let charIndex = 0;
+
+        function typeWord() {
+            if (wordIndex < words.length) {
+                if (charIndex < words[wordIndex].length) {
+                    typedNameElement.textContent += words[wordIndex].charAt(charIndex);
+                    charIndex++;
+                    setTimeout(typeWord, 150);
+                } else {
+                    typedNameElement.textContent += " ";
+                    charIndex = 0;
+                    wordIndex++;
+                    setTimeout(typeWord, 300);
+                }
+            }
+        }
+
+        typeWord();
+
+
+    </script>
+</body>
+</html>
