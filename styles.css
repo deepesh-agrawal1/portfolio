@@ -57,7 +57,7 @@ section {
     
     padding: 30px;
     /*border-bottom: 1px solid #ddd;*/
-    height: 90vh;
+    /*height: 90vh;*/
     padding-top: 80px; /* This should be equal to the height of your fixed header */
     padding-bottom: 20px;
     overflow: auto;
@@ -186,6 +186,11 @@ section h3 {
 /* Content Inside Advertisement */
 .advertisement-item .content {
     padding: 20px;
+}
+.advertisement-container .content .view-link{
+font-weight: bold; 
+display: inline-block;
+margin-top: 15px; 
 }
 
 .advertisement-item .content h3 {
